@@ -1,0 +1,96 @@
+/* ── Stats summary cards ── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* ── Individual stat card ── */
+.stats-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #27ae60;
+}
+
+.stats-card i {
+    font-size: 32px;
+    color: #27ae60;
+}
+
+.stats-card h3 {
+    font-size: 26px;
+    margin: 10px 0 5px;
+    color: #2c3e50;
+}
+
+.stats-card p {
+    color: #888;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ── Two column chart layout ── */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* ── Chart container box ── */
+.chart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.chart-box h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* ── Chart canvas max height ── */
+canvas {
+    max-height: 300px;
+    width: 100%;
+}
+
+/* ── Top actes table ── */
+.top-acts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.top-acts-table th {
+    background: #27ae60;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.top-acts-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.top-acts-table tr:hover {
+    background-color: #f0fff4;
+}
+
+/* ── Responsive: stack on mobile ── */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,534 @@
+
+/* CABINET DENTAIRE le homepage */
+/* Dark forest green + glassmorphism + mint accents */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #0a1410;
+    color: #e8e8e8;
+}
+
+
+/* NAVIGATION - Glassmorphism */
+
+
+.navbar {
+    background: rgba(10,20,16,0.98);
+    backdrop-filter: blur(12px);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0,255,150,0.15);
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #00ff96 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+}
+
+.logo i {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    color: #00ff96;
+    margin-right: 8px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #b0c4be;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #00ff96;
+}
+
+.btn-login {
+    background: #00ff96;
+    color: #0a1410 !important;
+    padding: 8px 24px !important;
+    border-radius: 30px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s;
+}
+
+.btn-login:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,150,0.3);
+}
+
+
+/* HERO text white */
+
+
+.hero {
+    background: radial-gradient(circle at 10% 30%, #0e2a1e, #0a1410);
+    padding: 100px 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+            45deg,
+            rgba(0,255,150,0.02) 0px,
+            rgba(0,255,150,0.02) 2px,
+            transparent 2px,
+            transparent 8px
+    );
+    animation: drift 50s linear infinite;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.hero-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #b0c4be;
+    margin-bottom: 30px;
+    animation: fadeUp 0.8s ease-out 0.1s backwards;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+    animation: fadeIn 1s ease-out 0.2s backwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-image i {
+    font-size: 160px;
+    color: #00ff96;
+    filter: drop-shadow(0 0 20px rgba(0,255,150,0.2));
+    transition: all 0.3s;
+}
+
+.hero-image i:hover {
+    transform: scale(1.05) rotate(5deg);
+    filter: drop-shadow(0 0 30px rgba(0,255,150,0.4));
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    animation: fadeUp 0.8s ease-out 0.2s backwards;
+}
+
+.btn-primary {
+    background: #00ff96;
+    color: #0a1410;
+    padding: 14px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,255,150,0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #00ff96;
+    color: #00ff96;
+    padding: 14px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: rgba(0,255,150,0.08);
+    transform: translateY(-3px);
+}
+
+
+/* SERVICES Glassmorphism cards with borders */
+
+
+.services {
+    padding: 80px 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff, #00ff96);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+}
+
+.services > p {
+    text-align: center;
+    color: #8aa39a;
+    margin-bottom: 48px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.service-card {
+    background: rgba(20,35,28,0.7);
+    backdrop-filter: blur(12px);
+    padding: 40px 24px;
+    border-radius: 24px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid rgba(0,255,150,0.2);
+    animation: cardAppear 0.5s ease-out backwards;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #00ff96;
+    box-shadow: 0 20px 40px rgba(0,255,150,0.1);
+    background: rgba(25,45,35,0.85);
+}
+
+.service-icon {
+    font-size: 52px;
+    color: #00ff96;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #a8c4b8;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* DOCTORS */
+
+
+.about {
+    background: linear-gradient(180deg, #0a1410 0%, #0d2218 100%);
+    padding: 80px 32px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff, #00ff96);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+}
+
+.about > p {
+    color: #8aa39a;
+    margin-bottom: 48px;
+}
+
+.doctors-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.doctor-card {
+    background: rgba(20,35,28,0.7);
+    backdrop-filter: blur(12px);
+    padding: 32px 24px;
+    border-radius: 24px;
+    width: 260px;
+    transition: all 0.3s;
+    border: 1px solid rgba(0,255,150,0.15);
+}
+
+.doctor-card:hover {
+    transform: translateY(-6px);
+    border-color: #00ff96;
+    box-shadow: 0 12px 25px rgba(0,255,150,0.08);
+    background: rgba(25,45,35,0.85);
+}
+
+.doctor-card i {
+    font-size: 56px;
+    color: #00ff96;
+    margin-bottom: 16px;
+}
+
+.doctor-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.doctor-card p {
+    color: #a8c4b8;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.doctor-card span {
+    font-size: 12px;
+    color: #00ff96;
+    font-weight: 500;
+}
+
+
+/* CONTACT */
+
+
+.contact {
+    padding: 80px 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff, #00ff96);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.contact-info p {
+    margin: 18px 0;
+    color: #b0c4be;
+}
+
+.contact-info i {
+    width: 32px;
+    color: #00ff96;
+    margin-right: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border: 1px solid #1a3a2a;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #0e2218;
+    color: #ffffff;
+    transition: all 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00ff96;
+    box-shadow: 0 0 0 2px rgba(0,255,150,0.15);
+}
+
+.contact-form button {
+    width: 100%;
+    background: #00ff96;
+    color: #0a1410;
+    padding: 14px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,255,150,0.25);
+}
+
+/* Footer */
+footer {
+    background: #05100a;
+    text-align: center;
+    padding: 32px;
+    color: #5a7a6a;
+    font-size: 14px;
+    border-top: 1px solid rgba(0,255,150,0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-menu {
+        display: none;
+    }
+}
+
+/* Footer */
+footer {
+    background: #05100a;
+    text-align: center;
+    padding: 32px;
+    color: #5a7a6a;
+    font-size: 14px;
+    border-top: 1px solid rgba(0,255,150,0.08);
+}
+
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-staff {
+    margin-top: 15px;
+}
+
+.staff-link {
+    color: #5a7a6a;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.staff-link:hover {
+    color: #00ff96;
+}
