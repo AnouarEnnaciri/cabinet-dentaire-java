@@ -1,5 +1,5 @@
 # Cabinet Dentaire - Application de Gestion de Cabinet Dentaire
-
+**Développé par : Anouar Ennaciri**
 ## 📋 À propos
 
 Application web complète pour la gestion d'un cabinet dentaire (Java 17, JSP/Servlets, SQLite, JDBC). Architecture MVC sans Spring Boot.
