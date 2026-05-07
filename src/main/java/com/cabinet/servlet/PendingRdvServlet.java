@@ -21,7 +21,7 @@ public class PendingRdvServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String role = (String) session.getAttribute("role");
 
-        // Seulement admin et secrétaire peuvent voir les demandes
+        // only admin and secretary can see requests
         if (!"admin".equals(role) && !"secretaire".equals(role)) {
             response.sendRedirect(request.getContextPath() + "/dashboard");
             return;

@@ -12,7 +12,7 @@
 <!-- Navigation -->
 <nav class="navbar">
     <div class="nav-container">
-        <a href="/" class="logo"><i class="fas fa-tooth"></i> Cabinet Dentaire</a>
+        <a href="/" class="logo"><i class="fas fa-building"></i> Cabinet Dentaire</a>
         <ul class="nav-menu">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#services">Services</a></li>
@@ -25,11 +25,16 @@
 <!-- Hero Section -->
 <section class="hero" id="accueil">
     <div class="hero-content">
-        <h1>Votre sourire, notre passion</h1>
-        <p>Soins dentaires modernes et personnalisés à Rabat</p>
-        <div class="hero-buttons">
-            <a href="public-rdv" class="btn-primary">Prendre RDV</a>
-            <a href="#services" class="btn-secondary">En Savoir Plus</a>
+        <div class="hero-text">
+            <h1>Votre sourire, <span class="highlight">notre passion</span></h1>
+            <p>Soins dentaires modernes et personnalisés à Rabat</p>
+            <div class="hero-buttons">
+                <a href="public-rdv" class="btn-primary"><i class="fas fa-calendar-check"></i> Prendre RDV</a>
+                <a href="#services" class="btn-secondary"><i class="fas fa-chevron-right"></i> En Savoir Plus</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-tooth floating-tooth"></i>
         </div>
     </div>
 </section>
@@ -71,29 +76,44 @@
     </div>
 </section>
 
-<!-- Doctors Section -->
-<section class="about" id="medecins">
-    <div class="about-content">
-        <h2>Notre Équipe</h2>
-        <p>Une équipe de dentistes expérimentés à votre service</p>
-        <div class="doctors-grid">
-            <div class="doctor-card">
-                <i class="fas fa-user-md"></i>
-                <h3>Dr. Jihane</h3>
-                <p>Chirurgien-dentiste</p>
-                <span>15 ans d'expérience</span>
+<!-- Doctors Section  -->
+<section class="team-section" id="medecins">
+    <div class="team-container">
+        <div class="team-header">
+            <span class="team-badge">Experts en dentisterie</span>
+            <h2>Notre Équipe</h2>
+            <p>Des professionnels dédiés à votre santé bucco-dentaire</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-image">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Dr. Jihane</h3>
+                    <p class="specialty">Chirurgien-dentiste</p>
+                    <p class="exp">15 ans d'expérience</p>
+                </div>
             </div>
-            <div class="doctor-card">
-                <i class="fas fa-user-md"></i>
-                <h3>Dr. Omar bourrehane</h3>
-                <p>Orthodontiste</p>
-                <span>10 ans d'expérience</span>
+            <div class="team-card">
+                <div class="team-image">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Dr. Omar bourrehane</h3>
+                    <p class="specialty">Orthodontiste</p>
+                    <p class="exp">10 ans d'expérience</p>
+                </div>
             </div>
-            <div class="doctor-card">
-                <i class="fas fa-user-md"></i>
-                <h3>Dr. Anouar Ennaciri</h3>
-                <p>Pédodontiste</p>
-                <span>8 ans d'expérience</span>
+            <div class="team-card">
+                <div class="team-image">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Dr. Anouar Ennaciri</h3>
+                    <p class="specialty">Pédodontiste</p>
+                    <p class="exp">8 ans d'expérience</p>
+                </div>
             </div>
         </div>
     </div>

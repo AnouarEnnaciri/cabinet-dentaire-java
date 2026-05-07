@@ -18,7 +18,7 @@ public class MedicamentDAO {
 
             while (rs.next()) {
                 Medicament m = new Medicament();
-                m.setId(rs.getInt("id"));
+                m.setId(rs.getLong("id"));
                 m.setNom(rs.getString("nom"));
                 list.add(m);
             }
@@ -28,17 +28,17 @@ public class MedicamentDAO {
         return list;
     }
 
-    public Medicament findById(int id) {
+    public Medicament findById(Long id) {
         String sql = "SELECT * FROM medicaments WHERE id = ?";
 
         try (Connection conn = DatabaseUtil.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setInt(1, id);
+            pstmt.setLong(1, id);
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 Medicament m = new Medicament();
-                m.setId(rs.getInt("id"));
+                m.setId(rs.getLong("id"));
                 m.setNom(rs.getString("nom"));
                 return m;
             }

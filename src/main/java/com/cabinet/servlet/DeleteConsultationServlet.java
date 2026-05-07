@@ -27,8 +27,7 @@ public class DeleteConsultationServlet extends HttpServlet {
         Long consultationId = Long.parseLong(request.getParameter("id"));
         Long patientId = Long.parseLong(request.getParameter("patientId"));
 
-        // Supprimer d'abord les interventions liées
-        // TODO: interventionDAO.deleteByConsultationId(consultationId);
+
 
         consultationDAO.deleteConsultation(consultationId);
 

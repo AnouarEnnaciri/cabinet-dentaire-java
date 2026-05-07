@@ -26,7 +26,9 @@
 <head>
     <title>Dossiers médicaux - Cabinet Dentaire</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="<%= ctx %>/css/style.css">
+   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/theme.css">
+   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/components.css">
+   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
 </head>
 <body data-context="<%= ctx %>">
 
@@ -226,7 +228,7 @@
                     <button type="button" class="btn-add-prescription" onclick="addPrescriptionRow()">+</button>
                 </div>
             </div>
-            <small class="info-message">Ajoutez tous les médicaments prescrits avec leur posologie.</small>
+            <small class="info-message" style="display: inline-block;">Ajoutez tous les médicaments prescrits avec leur posologie.</small>
         </div>
 
         <div class="form-group">

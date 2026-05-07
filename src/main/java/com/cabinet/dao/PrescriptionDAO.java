@@ -9,7 +9,7 @@ import java.util.List;
 public class PrescriptionDAO {
 
     // Save multiple prescriptions for a consultation
-    public void saveAll(long consultationId, List<Prescription> prescriptions) {
+    public void saveAll(Long consultationId, List<Prescription> prescriptions) {
         String sql = "INSERT INTO prescriptions (consultation_id, medicament_nom, posologie) VALUES (?, ?, ?)";
 
         try (Connection conn = DatabaseUtil.getConnection();
@@ -29,7 +29,7 @@ public class PrescriptionDAO {
     }
 
     // Get all prescriptions for a consultation
-    public List<Prescription> getByConsultationId(long consultationId) {
+    public List<Prescription> getByConsultationId(Long consultationId) {
         List<Prescription> list = new ArrayList<>();
         String sql = "SELECT * FROM prescriptions WHERE consultation_id = ? ORDER BY id ASC";
 
@@ -41,8 +41,8 @@ public class PrescriptionDAO {
 
             while (rs.next()) {
                 Prescription p = new Prescription();
-                p.setId(rs.getInt("id"));
-                p.setConsultationId(rs.getInt("consultation_id"));
+                p.setId(rs.getLong("id"));           // Changed from getInt to getLong
+                p.setConsultationId(rs.getLong("consultation_id"));  // Changed from getInt to getLong
                 p.setMedicamentNom(rs.getString("medicament_nom"));
                 p.setPosologie(rs.getString("posologie"));
                 list.add(p);
@@ -52,8 +52,9 @@ public class PrescriptionDAO {
         }
         return list;
     }
-    // Delete all prescriptions for a consultation (useful for updates)
-    public void deleteByConsultationId(long consultationId) {
+
+    // Delete all prescriptions for a consultation
+    public void deleteByConsultationId(Long consultationId) {
         String sql = "DELETE FROM prescriptions WHERE consultation_id = ?";
 
         try (Connection conn = DatabaseUtil.getConnection();

@@ -66,7 +66,7 @@ public class DatabaseUtil {
                 "modifiePar TEXT" +
                 ")");
 
-        // Rendez-vous table
+        // RDV-vous table
         stmt.execute("CREATE TABLE IF NOT EXISTS rendez_vous (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "patient_id INTEGER, " +
@@ -103,7 +103,7 @@ public class DatabaseUtil {
                 "FOREIGN KEY (medecin_id) REFERENCES utilisateurs(id)" +
                 ")");
 
-        // Catalogue des actes
+        // Catalogue  actes
         String actesTable = "CREATE TABLE IF NOT EXISTS actes (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "code TEXT UNIQUE NOT NULL, " +

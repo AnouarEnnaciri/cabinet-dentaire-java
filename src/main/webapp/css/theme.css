@@ -1,0 +1,94 @@
+/* ============================================ */
+/* THEME.CSS - Design Tokens (Single Source of Truth) */
+/* ============================================ */
+
+:root {
+    /* ===== COLORS ===== */
+    /* Primary brand */
+    --primary: #00ff96;
+    --primary-hover: #00cc78;
+    --primary-glow: rgba(0, 255, 150, 0.3);
+
+    /* Backgrounds */
+    --bg-dark: #0a1410;
+    --bg-darker: #05100a;
+    --bg-card: rgba(20, 35, 28, 0.85);
+    --bg-app: #0d1f18;
+    --bg-input: rgba(14, 34, 24, 0.8);
+
+    /* Text colors */
+    --text-primary: #e8e8e8;
+    --text-secondary: #b0c4be;
+    --text-muted: #5a7a6a;
+    --text-dark: #1a2a20;
+
+    /* Border colors */
+    --border-light: rgba(0, 255, 150, 0.15);
+    --border-medium: rgba(0, 255, 150, 0.25);
+    --border-glow: rgba(0, 255, 150, 0.4);
+
+    /* Semantic colors */
+    --success: #00ff96;
+    --success-bg: rgba(0, 255, 150, 0.1);
+    --error: #ff6b6b;
+    --error-bg: rgba(231, 76, 60, 0.1);
+    --warning: #f39c12;
+    --warning-bg: rgba(243, 156, 18, 0.1);
+    --info: #3498db;
+    --info-bg: rgba(52, 152, 219, 0.1);
+
+    /* Action buttons */
+    --btn-green: #27ae60;
+    --btn-green-hover: #1e8449;
+    --btn-red: #e74c3c;
+    --btn-red-hover: #c0392b;
+    --btn-blue: #3498db;
+    --btn-blue-hover: #2980b9;
+    --btn-purple: #8e44ad;
+    --btn-purple-hover: #6c3483;
+    --btn-grey: #95a5a6;
+    --btn-grey-hover: #7f8c8d;
+
+    /* ===== SPACING ===== */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+
+    /* ===== FONTS ===== */
+    --font-family: 'Space Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-xs: 11px;
+    --font-size-sm: 12px;
+    --font-size-md: 14px;
+    --font-size-lg: 18px;
+    --font-size-xl: 28px;
+    --font-size-2xl: 36px;
+    --font-size-3xl: 48px;
+
+    /* ===== BORDER RADIUS ===== */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 20px;
+    --radius-2xl: 28px;
+    --radius-full: 9999px;
+
+    /* ===== SHADOWS ===== */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 20px rgba(0, 255, 150, 0.15);
+    --shadow-glow-hover: 0 0 30px rgba(0, 255, 150, 0.25);
+
+    /* ===== TRANSITIONS ===== */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.2s ease;
+    --transition-slow: 0.3s ease;
+
+    /* ===== Z-INDEX ===== */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-modal: 1000;
+}

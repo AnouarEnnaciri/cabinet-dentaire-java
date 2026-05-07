@@ -92,8 +92,9 @@ public class RendezVousServlet extends HttpServlet {
                 try {
                     date = LocalDate.parse(dateStr);
                     int year = date.getYear();
-                    if (year < 2020 || year > 2030) {
-                        response.sendRedirect("rendezvous?error=Date invalide (année entre 2020 et 2030)");
+                    int currentYear = LocalDate.now().getYear();
+                    if (year < currentYear || year > currentYear + 5) {
+                        response.sendRedirect("rendezvous?error=Date invalide (année doit être entre " + currentYear + " et " + (currentYear + 5) + ")");
                         return;
                     }
                 } catch (DateTimeParseException e) {

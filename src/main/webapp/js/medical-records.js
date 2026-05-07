@@ -1,11 +1,11 @@
-// =========================
+
 // CONTEXT PATH (from JSP body attribute)
-// =========================
+
 const contextPath = document.body.getAttribute("data-context") || "";
 
-// =========================
+
 // ACTES DYNAMIQUES
-// =========================
+
 let acteCounter = document.querySelectorAll('.acte-row').length || 1;
 
 function addActeRow() {
@@ -77,9 +77,9 @@ function toggleDentField(selectElement, index) {
     if (!needsDent) dentInput.value = '';
 }
 
-// =========================
+
 // PRESCRIPTIONS DYNAMIQUES
-// =========================
+
 let prescriptionCounter = document.querySelectorAll('.prescription-row').length || 1;
 
 function addPrescriptionRow() {
@@ -124,9 +124,9 @@ function toggleCustomInput(selectElement, index) {
     }
 }
 
-// =========================
+
 // DELETE CONSULTATION MODAL
-// =========================
+
 let pendingConsultationId = null;
 let pendingPatientId = null;
 
@@ -150,16 +150,16 @@ function closeDeleteConsultationModal() {
     pendingPatientId = null;
 }
 
-// =========================
+
 // FACTURE
-// =========================
+
 function genererFacture(patientId, consultationId) {
     window.location.href = contextPath + "/generer-facture?patientId=" + patientId + "&consultationId=" + consultationId;
 }
 
-// =========================
+
 // CERTIFICAT MÉDICAL
-// =========================
+
 function genererCertificat(patientId, consultationId) {
     console.log("=== BUTTON CLICKED ===");
     console.log("Patient: " + patientId + ", Consultation: " + consultationId);
@@ -176,9 +176,9 @@ function genererCertificat(patientId, consultationId) {
     window.location.href = url;
 }
 
-// =========================
+
 // ANTÉCÉDENTS
-// =========================
+
 function openAddAntecedentModal(patientId) {
     document.getElementById('antecedentPatientId').value = patientId;
     const modal = document.getElementById('antecedentModal');
@@ -205,9 +205,9 @@ function saveAntecedent() {
     }).catch(err => console.error('Error:', err));
 }
 
-// =========================
+
 // DELETE ANTÉCÉDENT
-// =========================
+
 let pendingAntecedentId = null;
 let pendingAntecedentPatientId = null;
 
@@ -236,9 +236,9 @@ function confirmDeleteAntecedent() {
     }
 }
 
-// =========================
+
 // INITIALISATION
-// =========================
+
 document.addEventListener('DOMContentLoaded', function() {
     const firstActeSelect = document.querySelector('select[name="acteId_0"]');
     if (firstActeSelect) {

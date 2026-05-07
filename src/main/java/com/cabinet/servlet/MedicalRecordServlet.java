@@ -70,7 +70,7 @@ public class MedicalRecordServlet extends HttpServlet {
                     List<Prescription> allPrescriptions = new ArrayList<>();
                     for (Consultation c : consultations) {
                         // Convert Long to int safely
-                        int consultationIdInt = c.getId().intValue();
+                        Long consultationIdInt = c.getId();
                         allPrescriptions.addAll(prescriptionDAO.getByConsultationId(consultationIdInt));
                     }
                     request.setAttribute("prescriptions", allPrescriptions);
@@ -86,7 +86,7 @@ public class MedicalRecordServlet extends HttpServlet {
             }
         }
 
-        // Load actes and medicaments (always needed for the form)
+        // Load actes and medicaments 
         List<Acte> actes = acteDAO.getAllActes();
         List<Medicament> medicaments = medicamentDAO.getAll();
         request.setAttribute("actes", actes);
@@ -173,7 +173,7 @@ public class MedicalRecordServlet extends HttpServlet {
             }
 
             if (!prescriptions.isEmpty()) {
-                prescriptionDAO.saveAll(consultationId.intValue(), prescriptions);
+                prescriptionDAO.saveAll(consultationId, prescriptions);
             }
 
             response.sendRedirect("medical-records?patientId=" + patientId);

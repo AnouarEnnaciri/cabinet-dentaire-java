@@ -28,7 +28,7 @@ public class DossierMedicalDAO {
             System.err.println("Erreur recherche dossier: " + e.getMessage());
         }
 
-        // Créer un nouveau dossier
+        // new folder
         String insertSql = "INSERT INTO dossiers_medicaux (patient_id, dateCreation) VALUES (?, ?)";
         try (Connection conn = DatabaseUtil.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(insertSql, Statement.RETURN_GENERATED_KEYS)) {

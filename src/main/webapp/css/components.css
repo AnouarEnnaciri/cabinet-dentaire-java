@@ -1,0 +1,407 @@
+/* ============================================ */
+/* COMPONENTS.CSS - Shared UI Components        */
+/* ============================================ */
+
+/* ============================================ */
+/* 1. BUTTONS - All action buttons              */
+/* ============================================ */
+
+/* Base button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-family: var(--font-family);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Add button (green) */
+.btn-add {
+    padding: 9px 20px;
+    background: var(--btn-green);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-md);
+}
+.btn-add:hover {
+    background: var(--btn-green-hover);
+    transform: translateY(-1px);
+}
+
+/* Delete button (red) */
+.btn-delete {
+    padding: 6px 14px;
+    background: var(--btn-red);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+}
+.btn-delete:hover {
+    background: var(--btn-red-hover);
+    transform: translateY(-1px);
+}
+
+/* Edit button (blue) */
+.btn-edit {
+    padding: 6px 14px;
+    background: var(--btn-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    display: inline-block;
+}
+.btn-edit:hover {
+    background: var(--btn-blue-hover);
+    transform: translateY(-1px);
+}
+
+/* View button */
+.btn-view {
+    padding: 6px 14px;
+    background: var(--btn-green);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-view:hover {
+    background: var(--btn-green-hover);
+    transform: translateY(-1px);
+}
+
+/* Cancel button (grey) */
+.btn-cancel {
+    padding: 6px 14px;
+    background: var(--btn-grey);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+}
+.btn-cancel:hover {
+    background: var(--btn-grey-hover);
+    transform: translateY(-1px);
+}
+
+/* Facture button */
+.btn-facture {
+    padding: 5px 10px;
+    background: var(--btn-green);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+}
+.btn-facture:hover {
+    background: var(--btn-green-hover);
+    transform: translateY(-1px);
+}
+
+/* Certificate button (purple) */
+.btn-certificat {
+    padding: 5px 10px;
+    background: var(--btn-purple);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+}
+.btn-certificat:hover {
+    background: var(--btn-purple-hover);
+    transform: translateY(-1px);
+}
+
+/* Fix button (for special cases) */
+.btn-fix {
+    padding: 5px 12px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    height: 28px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--btn-blue);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    margin-right: var(--space-sm);
+}
+.btn-fix:hover {
+    background-color: var(--btn-blue-hover);
+    transform: translateY(-1px);
+}
+
+/* Add acte button */
+.btn-add-acte {
+    padding: 6px 12px;
+    background: var(--btn-green);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+}
+.btn-add-acte:hover {
+    background: var(--btn-green-hover);
+}
+
+/* Add prescription button */
+.btn-add-prescription {
+    background: var(--btn-green);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.btn-add-prescription:hover {
+    background: var(--btn-green-hover);
+}
+
+/* Logout button */
+.logout-btn {
+    background: var(--btn-red);
+    color: white;
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: var(--space-lg);
+}
+.logout-btn:hover {
+    background: var(--btn-red-hover);
+    transform: translateY(-1px);
+}
+
+/* Card button (dashboard) */
+.card-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--btn-green);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    border: none;
+    cursor: pointer;
+}
+.card-btn.disabled {
+    background: var(--btn-grey);
+    cursor: not-allowed;
+}
+.card-btn:hover:not(.disabled) {
+    background: var(--btn-green-hover);
+    transform: translateY(-1px);
+}
+
+/* ============================================ */
+/* 2. BUTTON GROUPS                            */
+/* ============================================ */
+
+.btn-group {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    margin-right: var(--space-sm);
+}
+
+/* ============================================ */
+/* 3. FORM INPUTS                              */
+/* ============================================ */
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+input, select, textarea {
+    padding: 9px 12px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-md);
+    font-family: var(--font-family);
+    transition: all var(--transition-normal);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-glow);
+}
+
+.search-input {
+    width: 200px;
+    margin-right: var(--space-sm);
+    padding: 9px 12px;
+}
+
+.full-width-text {
+    width: 100%;
+    max-width: 500px;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    font-family: inherit;
+}
+
+/* ============================================ */
+/* 4. TABLES                                   */
+/* ============================================ */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: var(--space-md);
+}
+
+
+/* ============================================ */
+/* 5. MODALS - Dark theme                       */
+/* ============================================ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: var(--z-modal);
+}
+
+.modal-overlay.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background: #1a1a1a;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    max-width: 400px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0, 255, 150, 0.2);
+}
+
+.modal-box h3 {
+    color: #2ecc9e;
+    margin-bottom: var(--space-md);
+}
+
+.modal-box p {
+    color: #b0b0b0;
+}
+
+.modal-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-lg);
+}
+
+/* ============================================ */
+/* 6. CARDS (Dashboard)                        */
+/* ============================================ */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+}
+
+.dashboard-card {
+    background: white;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card i {
+    font-size: 48px;
+    color: var(--btn-green);
+    margin-bottom: var(--space-md);
+}
+
+.dashboard-card h3 {
+    color: var(--text-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.dashboard-card p {
+    color: #666;
+    margin-bottom: var(--space-lg);
+}
+
+/* ============================================ */
+/* 7. MESSAGES                                 */
+/* ============================================ */
+
+.info-message {
+    background: var(--info-bg);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    color: var(--info);
+    margin: var(--space-md) 0;
+}
+
+.error-message {
+    background: var(--error-bg);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    color: var(--error);
+    margin: var(--space-lg) 0;
+}
+
+.success-message {
+    background: var(--success-bg);
+    color: var(--text-dark);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+    border: 1px solid var(--success);
+}
+
+/* ============================================ */
+/* 8. UTILITY CLASSES                          */
+/* ============================================ */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: var(--space-sm); }
+.mt-2 { margin-top: var(--space-md); }
+.mt-3 { margin-top: var(--space-lg); }
+
+.mb-1 { margin-bottom: var(--space-sm); }
+.mb-2 { margin-bottom: var(--space-md); }
+.mb-3 { margin-bottom: var(--space-lg); }
+
+.hidden-template { display: none;
+
+}

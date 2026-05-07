@@ -88,11 +88,11 @@ public class CertificatDAO {
         String dateEmissionStr = rs.getString("date_emission");
         if (dateEmissionStr != null) {
             try {
-                // Try to parse as ISO date string first
+                // parse as iso date string first
                 c.setDateEmission(LocalDateTime.parse(dateEmissionStr));
             } catch (Exception e) {
                 try {
-                    // If that fails, treat as milliseconds timestamp
+                    // if fails treat as milliseconds timestamp
                     long timestamp = Long.parseLong(dateEmissionStr);
                     c.setDateEmission(LocalDateTime.ofInstant(
                             Instant.ofEpochMilli(timestamp),

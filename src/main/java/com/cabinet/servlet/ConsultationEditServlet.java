@@ -27,7 +27,7 @@ public class ConsultationEditServlet extends HttpServlet {
 
         String action = request.getParameter("action");
 
-        // Gestion de la suppression
+        // deleting
         if ("delete".equals(action)) {
             Long id = Long.parseLong(request.getParameter("id"));
             Long patientId = Long.parseLong(request.getParameter("patientId"));
@@ -36,7 +36,7 @@ public class ConsultationEditServlet extends HttpServlet {
             return;
         }
 
-        // Gestion de l'édition (affichage du formulaire)
+        // editing
         String idParam = request.getParameter("id");
         String patientIdParam = request.getParameter("patientId");
 

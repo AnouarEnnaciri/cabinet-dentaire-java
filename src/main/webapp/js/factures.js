@@ -1,4 +1,4 @@
-// factures.js - Modal payment handling with custom annulation modal
+// factures.js Modal payment handling with custom annulation modal
 
 let currentFacture = {
     id: null,

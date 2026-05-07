@@ -8,7 +8,7 @@ public class Patient extends BaseEntity {
     private int age;          // age in years
 
 
-    // empty constructor  needed so we can create object then fill later
+    // empty constructor needed so we can create object then fill later
 
     public Patient() {
         super(); // calls BaseEntity constructor to set dateCreation

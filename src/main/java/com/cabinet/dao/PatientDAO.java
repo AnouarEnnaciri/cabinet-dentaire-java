@@ -109,7 +109,7 @@ public class PatientDAO {
             System.err.println("Error finding patient: " + e.getMessage());
         }
 
-        // Créer un nouveau patient
+        // create new patient
         Patient newPatient = new Patient();
         newPatient.setName(nom);
         newPatient.setPhone(telephone);

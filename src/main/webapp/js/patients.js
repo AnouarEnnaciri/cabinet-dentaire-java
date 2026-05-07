@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // =========================
+
     // PATIENT DELETE MODAL
-    // =========================
+
     window.confirmDelete = function (id) {
         const modal = document.getElementById("deleteModal");
         const input = document.getElementById("deletePatientId");
@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("deleteModal").classList.remove("active");
     };
 
-    // =========================
+
     // PATIENT EDIT MODAL
-    // =========================
+
     window.openEditModal = function (id, name, phone, email, age) {
         document.getElementById("editId").value = id;
         document.getElementById("editName").value = name;
@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("editModal").classList.remove("active");
     };
 
-    // =========================
+
     // CLOSE MODALS ON OUTSIDE CLICK
-    // =========================
+
     window.addEventListener("click", function (e) {
         const deleteModal = document.getElementById("deleteModal");
         const editModal = document.getElementById("editModal");

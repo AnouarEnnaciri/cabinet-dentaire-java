@@ -52,7 +52,7 @@ public class EditUserServlet extends HttpServlet {
 
         utilisateurDAO.updateUserWithPassword(id, login, nom, email, userRole, newPassword);
 
-        // Message de succès
+        // success message
         session.setAttribute("msg", "Utilisateur modifié avec succès");
 
         response.sendRedirect(request.getContextPath() + "/admin/users");

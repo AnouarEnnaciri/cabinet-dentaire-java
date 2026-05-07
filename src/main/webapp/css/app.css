@@ -1,0 +1,515 @@
+
+/* APP.CSS  Staff Dark    */
+
+
+/* desaturated green for better eye comfort     */
+
+
+
+/* 1. BASE LAYOUT                               */
+
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: var(--space-lg);
+    /* Layered background for depth */
+    background: linear-gradient(145deg, #0a1215 0%, #0d1a1f 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* Main white card  Dark glass card with subtle gradient */
+.container {
+    max-width: 1100px;
+    margin: var(--space-xl) auto;
+    /* Slightly lighter than body for layered effect */
+    background: linear-gradient(135deg, rgba(25, 38, 32, 0.95) 0%, rgba(18, 28, 24, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    /* Enhanced shadow for depth */
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 200, 120, 0.12); /* Desaturated green border */
+}
+
+
+/* 2. TYPOGRAPHY - Softer green accent          */
+
+
+h1 {
+    /* Desaturated green */
+    color: #2ecc9e;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-sm);
+}
+
+h2 {
+    color: var(--text-primary);
+    border-left: 4px solid #2ecc9e;
+    padding-left: var(--space-sm);
+    margin-top: var(--space-lg);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-xl);
+}
+
+
+/* 3. TABLES (Dark themed)     */
+
+
+th {
+    background: linear-gradient(135deg, #1e5a4a 0%, #164a3c 100%);
+    color: #e8e8e8;
+    padding: var(--space-md);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(46, 204, 158, 0.3);
+}
+
+td {
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-secondary);
+}
+
+tr:hover {
+    background-color: rgba(46, 204, 158, 0.04);
+}
+
+
+/* 4. MEDICAL HISTORY TABLE   */
+
+
+.medical-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-lg);
+    background: rgba(10, 20, 16, 0.4);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.medical-history-table th {
+    background: linear-gradient(135deg, #1e5a4a 0%, #164a3c 100%);
+    color: #e8e8e8;
+    font-weight: 600;
+    padding: var(--space-md);
+}
+
+.medical-history-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-secondary);
+}
+
+.medical-history-table tr:nth-child(even) {
+    background-color: rgba(46, 204, 158, 0.02);
+}
+
+.medical-history-table tr:hover {
+    background-color: rgba(46, 204, 158, 0.06);
+}
+
+/* Action column */
+.medical-history-table .action-cell {
+    display: flex !important;
+    gap: var(--space-sm) !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    padding: var(--space-sm) var(--space-md) !important;
+}
+
+/* Ordonnance column */
+.medical-history-table td:nth-child(4) {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+
+/* 5. DASHBOARD - Cards with depth   */
+
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: var(--space-xl) auto;
+    padding: var(--space-lg);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid #2ecc9e;
+}
+
+.dashboard-header h1 {
+    color: #2ecc9e;
+    font-size: var(--font-size-xl);
+    margin: 0;
+}
+
+.dashboard-card {
+    /* Layered card - lighter than background */
+    background: linear-gradient(145deg, rgba(28, 45, 38, 0.9) 0%, rgba(20, 35, 28, 0.9) 100%);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(46, 204, 158, 0.15);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(46, 204, 158, 0.35);
+    box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard-card i {
+    color: #2ecc9e;
+}
+
+.dashboard-card h3 {
+    color: var(--text-primary);
+}
+
+.dashboard-card p {
+    color: var(--text-secondary);
+}
+
+
+/* 6. PATIENT INFO CARD - Subtle highlight      */
+
+
+.patient-info {
+    background: linear-gradient(135deg, rgba(46, 204, 158, 0.08) 0%, rgba(46, 204, 158, 0.03) 100%);
+    border: 1px solid rgba(46, 204, 158, 0.15);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+}
+
+.patient-info h3 {
+    color: #2ecc9e;
+}
+
+.patient-info p {
+    color: var(--text-secondary);
+}
+
+
+/* 7. TOP BAR & NAVIGATION  */
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.back-link {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-lg);
+    background: rgba(46, 204, 158, 0.08);
+    color: #2ecc9e;
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-md);
+    border: 1px solid rgba(46, 204, 158, 0.2);
+    transition: all var(--transition-normal);
+}
+
+.back-link:hover {
+    background: rgba(46, 204, 158, 0.15);
+    transform: translateX(-3px);
+}
+
+/* Home button in dashboard header */
+.home-link {
+    display: inline-block;
+    background: rgba(46, 204, 158, 0.08);
+    color: #2ecc9e;
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    transition: all var(--transition-normal);
+    border: 1px solid rgba(46, 204, 158, 0.2);
+    margin-right: var(--space-md);
+}
+
+.home-link:hover {
+    background: rgba(46, 204, 158, 0.15);
+    transform: translateY(-2px);
+}
+
+
+/* 8. STATS CARDS (For statistiques pages)      */
+
+
+.stats-card {
+    background: linear-gradient(145deg, rgba(28, 45, 38, 0.9) 0%, rgba(20, 35, 28, 0.9) 100%);
+    border: 1px solid rgba(46, 204, 158, 0.15);
+    border-top: 3px solid #2ecc9e;
+}
+
+.stats-card i {
+    color: #2ecc9e;
+}
+
+.stats-card h3 {
+    color: var(--text-primary);
+}
+
+.stats-card p {
+    color: var(--text-secondary);
+}
+
+
+/* 9. PRESCRIPTION DISPLAY     */
+
+
+.prescription-display {
+    margin-bottom: 6px;
+    padding: var(--space-xs) 0;
+    text-align: left;
+}
+
+.prescription-display strong {
+    font-size: var(--font-size-md);
+    color: var(--text-primary);
+}
+
+.prescription-display .posologie-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    display: block;
+}
+
+
+/* 10. CHART BOXES                              */
+
+
+.chart-box {
+    background: linear-gradient(145deg, rgba(28, 45, 38, 0.9) 0%, rgba(20, 35, 28, 0.9) 100%);
+    border: 1px solid rgba(46, 204, 158, 0.15);
+    border-radius: var(--radius-lg);
+}
+
+.chart-box h3 {
+    color: #2ecc9e;
+    border-bottom: 2px solid #2ecc9e;
+}
+
+
+/* 11. RESPONSIVE                               */
+
+
+@media (max-width: 768px) {
+    body {
+        padding: var(--space-md);
+    }
+
+    .container {
+        padding: var(--space-lg);
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .medical-history-table .action-cell {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+/* Fix form inputs visibility - makes text readable */
+.form-group input,
+.form-group select,
+.form-group textarea,
+.acte-select,
+.medicament-select,
+.custom-medicament,
+.posologie-input,
+.quantite-input,
+.dent-input,
+.search-input {
+    background: rgba(10, 20, 16, 0.95) !important;
+    border: 1px solid rgba(46, 204, 158, 0.35) !important;
+    color: #ffffff !important;
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2ecc9e !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(46, 204, 158, 0.2) !important;
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder {
+    color: #6a8a7a !important;
+}
+
+/* Make labels visible */
+.form-group label {
+    color: #2ecc9e !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+/* Fix action buttons alignment in table */
+.medical-history-table th:last-child {
+    text-align: right !important;
+    padding-right: 20px !important;
+}
+
+.medical-history-table td:last-child {
+    text-align: right !important;
+    padding-right: 20px !important;
+}
+
+/* Fix the action cell container */
+.medical-history-table .action-cell {
+    display: flex !important;
+    gap: 8px !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    padding: 8px 0 !important;
+}
+
+/* Fix individual action buttons spacing */
+.medical-history-table .btn-fix,
+.medical-history-table .btn-delete,
+.medical-history-table .btn-certificat,
+.medical-history-table .btn-facture {
+    margin: 0 !important;
+    white-space: nowrap !important;
+}
+
+/* Fix the search form */
+.search-form {
+    display: flex !important;
+    gap: 12px !important;
+    align-items: center !important;
+    margin-bottom: 24px !important;
+    flex-wrap: wrap !important;
+}
+
+.search-input {
+    flex: 1 !important;
+    min-width: 200px !important;
+}
+
+/* Fix select dropdown text color */
+select option {
+    background: #0a1410 !important;
+    color: #ffffff !important;
+}
+
+/* Fix the add buttons (+ un antécédent, etc) */
+.btn-add-acte,
+.btn-add-prescription {
+    background: #2ecc9e !important;
+    color: #0a1410 !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+}
+
+.btn-add-acte:hover,
+.btn-add-prescription:hover {
+    background: #27ae84 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Fix the certificat select dropdown */
+.certificat-select {
+    background: rgba(10, 20, 16, 0.95) !important;
+    border: 1px solid rgba(46, 204, 158, 0.35) !important;
+    color: #ffffff !important;
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+}
+
+/* Fix inline labels */
+.inline-label {
+    color: #2ecc9e !important;
+    font-size: 13px !important;
+}
+
+/* Fix empty field text */
+.empty-field {
+    color: #6a8a7a !important;
+    font-style: italic !important;
+}
+
+
+.info-message {
+    background: none !important;
+    color: #2ecc9e !important;
+    padding: 0 !important;
+    margin-top: 8px !important;
+    display: block !important;
+}
+
+
+
+.btn-fix {
+    height: auto !important;
+    line-height: normal !important;
+    padding: 5px 12px !important;
+    margin: 0 !important;
+    background-color: #3498db !important;
+    font-size: 12px !important;
+    min-width: auto !important;
+    width: auto !important;
+}
+/* Add spacing between action buttons */
+.medical-history-table .action-cell {
+    gap: 8px !important;
+}
+
+/* Or add margin directly to the modifier button */
+.btn-fix {
+    height: auto !important;
+    line-height: normal !important;
+    padding: 5px 12px !important;
+    margin-right: 8px !important;  /* ADD THIS - creates space between buttons */
+    background-color: #3498db !important;
+    font-size: 12px !important;
+    min-width: auto !important;
+    width: auto !important;
+}
+
+/* Also make sure delete button has no extra margin pushing it */
+.btn-delete {
+    margin-left: 0 !important;
+}
+.btn-delete {
+    box-shadow: none !important;
+    background: #dc3545 !important;
+    background-image: none !important;
+    border: none !important;
+    text-shadow: none !important;
+}
+
+.btn-delete:hover {
+    box-shadow: none !important;
+    background: #b02a37 !important;
+    background-image: none !important;
+}

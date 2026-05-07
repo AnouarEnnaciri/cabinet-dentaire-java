@@ -33,10 +33,7 @@ public class GenererFactureServlet extends HttpServlet {
 
         List<InterventionMedecin> interventions = interventionDAO.getByConsultationId(consultationId);
 
-        // DEBUG: Print to console
-        System.out.println("=== FACTURE GENERATION ===");
-        System.out.println("Consultation ID: " + consultationId);
-        System.out.println("Interventions found: " + interventions.size());
+
 
         double montantTotal = 0;
         for (InterventionMedecin i : interventions) {

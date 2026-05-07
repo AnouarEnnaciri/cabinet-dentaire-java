@@ -11,7 +11,7 @@ public class BaseEntity {
 
     public BaseEntity() {
         this.dateCreation = LocalDateTime.now();
-        this.dateModification = LocalDateTime.now();
+        this.dateModification = null;  // Only set when actually modified
     }
 
     // Getters and Setters

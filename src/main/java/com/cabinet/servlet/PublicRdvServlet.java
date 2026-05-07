@@ -34,10 +34,10 @@ public class PublicRdvServlet extends HttpServlet {
 
         LocalDate date = LocalDate.parse(dateStr);
 
-        // Créer ou récupérer le patient
+        // create or get patient
         Patient patient = patientDAO.findOrCreateByNomTelephone(nom, telephone);
 
-        // Créer la demande de RDV
+        // create RDV
         RendezVous rdv = new RendezVous();
         rdv.setPatientId(patient.getId());
         rdv.setDate(date);

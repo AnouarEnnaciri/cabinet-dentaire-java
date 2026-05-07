@@ -12,7 +12,7 @@ public class AuthFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        // Initialisation du filtre (rien à faire ici pour l'instant)
+
     }
 
     @Override
@@ -25,7 +25,7 @@ public class AuthFilter implements Filter {
 
         String uri = req.getRequestURI();
 
-        // Pages publiques (tout le monde peut accéder)
+        // public page anyone can access
         if (uri.endsWith(".css") || uri.endsWith(".js") || uri.endsWith(".png") || uri.endsWith(".jpg")) {
             chain.doFilter(request, response);
             return;
@@ -36,7 +36,7 @@ public class AuthFilter implements Filter {
             return;
         }
 
-        // Vérifier si l'utilisateur est connecté
+        // check if user is connected/logged in
         if (session == null || session.getAttribute("user") == null) {
             res.sendRedirect(req.getContextPath() + "/login");
             return;
@@ -44,7 +44,7 @@ public class AuthFilter implements Filter {
 
         String role = (String) session.getAttribute("role");
 
-        // Règles d'accès par rôle
+        // rule access for each roles
         if ("secretaire".equals(role)) {
             if (uri.contains("/medical-records") && !uri.contains("?readonly")) {
                 System.out.println("Secrétaire accède aux dossiers médicaux (lecture seule)");
