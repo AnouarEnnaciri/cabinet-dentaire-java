@@ -100,7 +100,7 @@
                     <i class="fas fa-user-md"></i>
                 </div>
                 <div class="team-info">
-                    <h3>Dr. Omar bourrehane</h3>
+                    <h3>Dr. Amine2</h3>
                     <p class="specialty">Orthodontiste</p>
                     <p class="exp">10 ans d'expérience</p>
                 </div>
@@ -110,7 +110,7 @@
                     <i class="fas fa-user-md"></i>
                 </div>
                 <div class="team-info">
-                    <h3>Dr. Anouar Ennaciri</h3>
+                    <h3>Dr. Amine3</h3>
                     <p class="specialty">Pédodontiste</p>
                     <p class="exp">8 ans d'expérience</p>
                 </div>
