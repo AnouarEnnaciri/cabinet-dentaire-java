@@ -1,8 +1,15 @@
 # Cabinet Dentaire - Application de Gestion de Cabinet Dentaire
 **Développé par : Anouar Ennaciri**
-## 📋 À propos
 
-Application web complète pour la gestion d'un cabinet dentaire (Java 17, JSP/Servlets, SQLite, JDBC). Architecture MVC sans Spring Boot.
+
+## Présentation
+
+Application web complète de gestion de cabinet dentaire simulant un système professionnel utilisé en milieu médical.
+Elle permet la gestion des patients, des rendez-vous, des dossiers médicaux, des prescriptions, de la facturation et des rôles utilisateurs avec contrôle d’accès.
+
+## Objectif
+
+Ce projet simule un système réel de gestion de cabinet dentaire afin de centraliser les opérations médicales et administratives dans une architecture sécurisée et modulaire.
 
 ## 🛠️ Technologies
 
@@ -66,6 +73,22 @@ src/main/webapp/
 ├─ css/, js/       # Styles et scripts
 └─ index.jsp
 ```
+
+## Architecture technique
+
+- Architecture MVC (Servlets = contrôleurs)
+- Couche DAO pour l’accès aux données
+- Gestion des sessions HTTP
+- Filtre de sécurité pour contrôle des accès
+- Base de données SQLite embarquée
+
+## Points techniques clés
+
+- Authentification sécurisée avec hash SHA-256
+- Gestion des rôles et permissions côté backend
+- Génération de documents PDF médicaux (iTextPDF)
+- Architecture modulaire DAO / Service / Controller
+- Workflow métier complet des consultations
 
 ##  Configuration
 
