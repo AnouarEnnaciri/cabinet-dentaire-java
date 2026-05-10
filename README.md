@@ -15,7 +15,7 @@ Application web complète pour la gestion d'un cabinet dentaire (Java 17, JSP/Se
 | PDF | iTextPDF |
 | Frontend | Bootstrap 5, Chart.js |
 
-## 🚀 Installation
+##  Installation
 
 ```bash
 # Prérequis: Java 17 et Maven 3.8+
@@ -29,7 +29,7 @@ mvn tomcat7:run
 
 **Accès:** http://localhost:8080/
 
-## 🔐 Identifiants
+##  Identifiants
 
 | Rôle | Login | Mot de passe |
 |------|-------|--------------|
@@ -37,7 +37,7 @@ mvn tomcat7:run
 | Médecin | doctor | doctor123 |
 | Secrétaire | secretaire | secret123 |
 
-## ✅ Fonctionnalités
+##  Fonctionnalités
 
 | Module | Description |
 |--------|-------------|
@@ -51,7 +51,7 @@ mvn tomcat7:run
 | **Statistiques** | Graphiques (admin global, médecin personnel) |
 | **Admin utilisateurs** | Gestion médecins/secrétaires |
 
-## 📁 Structure simplifiée
+##  Structure simplifiée
 
 ```
 src/main/java/com/cabinet/
@@ -67,11 +67,11 @@ src/main/webapp/
 └─ index.jsp
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 Base de données SQLite auto-générée (`clinic.db`) au premier lancement.
 
-## 📝 Règles
+##  Règles
 
 - UI: français et Code: anglais
 - Pas de SQL dans les Servlets
