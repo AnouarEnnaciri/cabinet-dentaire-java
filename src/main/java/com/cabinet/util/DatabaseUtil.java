@@ -12,7 +12,13 @@ public class DatabaseUtil {
     private static final String DB_URL = "jdbc:sqlite:clinic.db";
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(DB_URL);
+        try {
+            // Force load SQLite JDBC driver
+            Class.forName("org.sqlite.JDBC");
+            return DriverManager.getConnection(DB_URL);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("SQLite JDBC Driver not found! Please check dependencies.", e);
+        }
     }
 
     public static void initDatabase() {
